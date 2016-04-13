@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to visit ！
+
+
+  #wrapper
+
+        #foodInfo
+            h2 Food Info
+            p
+                strong Name:
+                |  <span id='foodInfoName'></span>
+                br
+                strong Price:
+                |  <span id='foodInfoPrice'></span>
+
+
+        #foodTotal
+            h2 Total
+            p
+                 strong Total:
+                     <span id='foodTotalPrice'></span>
+                 br
+                 br
+                 |   (Total the price of all food items (use 7.5% for tax))
+
+        h2 Food List
+        #foodList
+            table
+                thead
+                    th FoodName
+                    th Price
+                    th Delete?
+                tbody
+
+        h2 Add Food
+        #addFood
+            fieldset
+                input#inputFoodName(type='text', placeholder='name')
+                input#inputFoodPrice(type='text', placeholder='Price')
+                br
+                button#btnAddFood Add Food
